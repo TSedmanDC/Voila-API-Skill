@@ -4,5 +4,3 @@ __pycache__/
 .DS_Store
 *.skill
 evals/
-# Optionally, if we don't want to commit playground credentials to a public repo:
-# scripts/config.json
