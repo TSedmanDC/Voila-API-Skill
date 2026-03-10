@@ -1,13 +1,16 @@
 # Voila API Claude Code Plugin
 
-A comprehensive guide and toolset for integrating with the Voila API (by Despatch Cloud). This plugin provides Claude with full knowledge of Voila's REST schemas, shipment flows, and courier management.
+A comprehensive guide and toolset for integrating with the Voila API (by The Despatch Company). This plugin provides Claude with full knowledge of Voila's REST schemas, shipment flows, and courier management.
 
 ## Features
 
 - **Full API Documentation:** Exhaustive schemas for labeling, tracking, pricing, and webhooks.
 - **Smart Shipping Flows:** Guidance on automating courier selection.
 - **Bundled Scripts:** Node.js and Python scripts for listing couriers and getting specifics.
-- **Playground Credentials:** Pre-configured for the Voila API playground.
+
+## API Configuration
+
+- **Base URL:** `https://app.heyvoila.io`
 
 ## Installation
 
@@ -16,9 +19,9 @@ A comprehensive guide and toolset for integrating with the Voila API (by Despatc
 To use this as a plugin in Claude Code:
 
 1. **Local Development Mode:**
-   Run Claude Code pointing to this directory:
+   Run Claude Code pointing to the plugin root directory:
    ```bash
-   claude --plugin-dir /path/to/Voila-API
+   claude --plugin-dir /path/to/plugin-root
    ```
 
 2. **Permanent Installation:**
@@ -34,23 +37,16 @@ To use this as a plugin in Claude Code:
 
 To use this as a skill in Cursor:
 
-1. **Direct Folder Reference:**
-   You can reference this folder directly in your Cursor rules or by telling Cursor to "use the @Voila-API folder as a skill".
+1. **Copy Skill Folder:**
+   Copy the `skills/voila-api` folder into your project's `.cursor/skills` directory.
 
-2. **Packaged Skill:**
-   If you use the `skill-creator` tool, you can package this directory into a `.skill` file for easier distribution.
-
-## API Configuration
-
-- **Base URL:** `https://app.heyvoila.io`
-- **Playground Credentials:**
-  - `api-user`: `VoilaPlayground`
-  - `api-token`: `vtkpuslqfrdhwbio`
+2. **Verify Detection:**
+   Ensure the skill is detected in **Cursor Settings** > **Rules, Skills, Subagents** > **Skills**. Once detected, Cursor will have access to the Voila API knowledge.
 
 ## Directory Structure
 
 ```text
-Voila-API/
+.
 ├── .claude-plugin/     # Plugin metadata
 │   └── plugin.json
 ├── skills/
@@ -61,7 +57,3 @@ Voila-API/
 │       └── evals/      # Test cases and assertions
 └── README.md           # This file
 ```
-
-## License
-
-MIT
