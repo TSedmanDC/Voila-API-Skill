@@ -1,0 +1,8 @@
+{
+  "name": "voila-api",
+  "description": "Definitive guide for the Voila API. Covers shipment creation (Manual/Smart Shipping), real-time tracking, detailed history, manifesting, collections, webhooks, and third-party integrations (Sorted, Peoplevox, Mintsoft, Veeqo, JD).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Thomas Sedman"
+  }
+}
